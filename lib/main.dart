@@ -14,6 +14,9 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: FlatButton(
+                onPressed: () {
+                  // play sound
+                },
                 color: Colors.red,
               ),
             )
