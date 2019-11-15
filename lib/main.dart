@@ -3,12 +3,12 @@ import 'package:audioplayers/audio_cache.dart';
 
 void main() => runApp(MyApp());
 
-Expanded playButton({Color color}) {
+Expanded playButton({Color color, int someAudioNumber}) {
   return Expanded(
     child: FlatButton(
       onPressed: () {
         final player = AudioCache();
-        player.play('something');
+        player.play('note$someAudioNumber.wav');
       },
       child: Container(
         color: color,
@@ -27,13 +27,13 @@ class MyApp extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            playButton(color: Colors.red),
-            playButton(color: Colors.green),
-            playButton(color: Colors.pink),
-            playButton(color: Colors.blue),
-            playButton(color: Colors.pinkAccent),
-            playButton(color: Colors.greenAccent),
-            playButton(color: Colors.redAccent),
+            playButton(color: Colors.red, someAudioNumber: 1),
+            playButton(color: Colors.green, someAudioNumber: 2),
+            playButton(color: Colors.pink, someAudioNumber: 3),
+            playButton(color: Colors.blue, someAudioNumber: 4),
+            playButton(color: Colors.pinkAccent, someAudioNumber: 5),
+            playButton(color: Colors.greenAccent, someAudioNumber: 6),
+            playButton(color: Colors.redAccent, someAudioNumber: 7),
           ],
         ),
       ),
