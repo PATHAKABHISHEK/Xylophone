@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
 
 void main() => runApp(MyApp());
 
@@ -6,7 +7,8 @@ Expanded playButton({Color color}) {
   return Expanded(
     child: FlatButton(
       onPressed: () {
-        // play sound
+        final player = AudioCache();
+        player.play('something');
       },
       child: Container(
         color: color,
