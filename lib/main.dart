@@ -9,7 +9,16 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(backgroundColor: Colors.purple),
-        body: Column(),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Expanded(
+              child: FlatButton(
+                color: Colors.red,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
